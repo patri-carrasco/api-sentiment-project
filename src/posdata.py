@@ -2,8 +2,11 @@ from config.configuration import db, col_chat, col_user, col_phrase
 
 def add_user(name):
   """
-   
+      Esta función inserta los un nuevo usario
+       arg:
+          name        
   """
+
   dict_insert = {
     "character": name
   }
@@ -20,6 +23,11 @@ def add_user(name):
   
 
 def add_chat(chat_name, participants):
+   """
+      Esta función inserta un nuevo chat 
+       arg:
+          chat_name, participants     
+  """
   dict_insert = {
     "chat":chat_name, 
     "participants" : participants  
@@ -37,8 +45,14 @@ def add_chat(chat_name, participants):
 
 
 def insert_phrase(chat,character,phrase):
- 
-
+  """
+      Esta función inserta frase 
+       arg:
+          chat
+          character
+          phrase        
+  """
+  #falta comprobar si el texto ya esta 
   dict_insert = {'chat':f'{chat}',
       "character": f'{character}',
       "phrase" :f'{phrase}'
