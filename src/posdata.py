@@ -17,16 +17,21 @@ def add_user(name):
     return "There is already a character with that name"
   
 
-
-
 def add_chat(chat_name, participants):
   dict_insert = {
-    'chat':f'{chat_name}',
-    'participants' : participants
-  }
-  col_chat.insert_one(dict_insert)
-
-
+    "chat":chat_name, 
+    "participants" : participants  
+    }
+  
+  find_chat = list(col_chat.find({"chat":{"$eq":chat_name}}))
+  
+  if len(find_chat) == 0:
+   
+    col_chat.insert_one(dict_insert)
+  else:
+    print("There is already a chat with that name")
+  
+  
 
 
 def insert_phrase(chat,character,phrase):
