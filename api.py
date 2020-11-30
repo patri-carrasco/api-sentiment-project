@@ -64,8 +64,8 @@ def show_chat():
 
 @app.route("/participants")
 def show_participants():
-    participants = get.show_participants()
-    return json.dumps(participants)
+  participants = get.show_participants()
+  return json.dumps(participants)
 
 
  # functions sentiment
