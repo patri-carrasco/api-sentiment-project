@@ -10,10 +10,10 @@ def phrasecharacter(character):
       return:
         phrases = frases del personaje
   '''
-    query = {"character":f"{character}"}
-    phrases = list(col_phrase.find(query,{"_id":0,"character":1,"chat":1, "phrase":1}))
+  query = {"character":f"{character}"}
+  phrases = list(col_phrase.find(query,{"_id":0,"character":1,"chat":1, "phrase":1}))
     
-    return phrases
+  return phrases
 
 def senti_phrasecharacter(character):
   """
@@ -24,10 +24,10 @@ def senti_phrasecharacter(character):
         phrases = frases del personaje
   """
     
-    query = {"character":f"{character}"}
-    phrases = list(col_phrase.find(query,{"_id":0, "phrase":1}))
+  query = {"character":f"{character}"}
+  phrases = list(col_phrase.find(query,{"_id":0, "phrase":1}))
     
-    return phrases
+  return phrases
 
 
 def show_chat():
