@@ -8,9 +8,14 @@ def getdata():
 
 
 def phrasecharacter(character):
-    
-
     query = {"character":f"{character}"}
     phrases = list(col_phrase.find(query,{"_id":0,"character":1,"chat":1, "phrase":1}))
+    
+    return phrases
+
+def senti_phrasecharacter(character):
+    
+    query = {"character":f"{character}"}
+    phrases = list(col_phrase.find(query,{"_id":0, "phrase":1}))
     
     return phrases

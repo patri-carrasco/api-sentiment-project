@@ -12,6 +12,10 @@ if not (DBURL):
 
 client = MongoClient(DBURL)
 db = client.get_database()
-collection = db["chats"]
+
+
+col_chat = db["chats"]
+col_user = db["user"]
+col_phrase = db['phrase']
 
 
