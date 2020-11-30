@@ -22,11 +22,7 @@ def index():
 
 
 
-@app.route("/get_data")
-def get_data():
-  data = get.getdata()
-  return data
-
+# functions post
 
 @app.route("/new/user",methods=["POST"])
 def new_user():
@@ -46,8 +42,6 @@ def new_chat():
   return "Ok, character entered correctly"
 
 
-
-
 @app.route("/new/phrase", methods = ["POST"])
 def newphrase():
   chat = request.form.get("chat")
@@ -56,12 +50,25 @@ def newphrase():
   pos.insert_phrase(chat,character,phrase)
   return "Ok,message entered correctly"
 
+# functions get 
 @app.route("/phrases/<character>")
 def phrase_character(character):
     phrases = get.phrasecharacter(character)
     return json.dumps(phrases)
 
+@app.route("/chats")
+def show_chat():
+    chats = get.show_chat()
+    return json.dumps(chats)
 
+
+@app.route("/participants")
+def show_participants():
+    participants = get.show_participants()
+    return json.dumps(participants)
+
+
+ # functions sentiment
 @app.route("/sentiment/character/<character>")
 def sentiment_character(character):
   print("ok")
