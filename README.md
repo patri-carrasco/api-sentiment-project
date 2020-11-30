@@ -26,7 +26,7 @@ Para ello hemos creado una API con los mensajes que se han enviado en los person
 
   ```
   phrase = {
-    "chats": "girls_friends",
+    "chats": "girls",
     "character : "Rachel",
     "phrase" : "Hello"
   }
@@ -37,9 +37,27 @@ Para ello hemos creado una API con los mensajes que se han enviado en los person
 
   ```
   chat = {
-    "chats": "girls_friends",
+    "chats": "girls",
     "participants :['Rachel', 'Monica', 'Phoebe']
   }
   ```
+
+
+  - **/chats**
+
+  Con este endpoint vemos los chats que hay en la base de datos.
+
+
+- **/phrases/<character>**
+
+  Con este endpoint vemos las frases del character elegido, por ejemplo character = Ros
+
+- **/participants**
+
+  Con este endpoint vemos los participantes de los chats
+
  - **/sentiment/character**
  Con este endpoint analizaremos las frases los sentimientos de las frases de un personaje
+
+
+ 
