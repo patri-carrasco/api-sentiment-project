@@ -1,63 +1,52 @@
 # Creando una API de Friends
 <div style="text-align:center"><img src="https://blog.ticketmaster.es/wp-content/uploads/2018/08/que-fue-actores-friends-1.jpg" height=300 /></div> 
 
+
+
 # **Introducción**
 
 En este proyecto vamos analizar sentimientos de un grupo de chat.
 
 Para ello hemos creado una API con los mensajes que se han enviado en los personajes de la  serie Friends.
-
-
-
-# ¿Cómo funciona?
-
- - **/new/user**
-  Con este endpoint insertaremos nuevos personajes a la base de datos.
-
- ```
-  character = {
-    "character : "Rachel",
-  }
-  ```
-
-
-  - **/new/phrase**
-  Con este endpoint insertaremos frases a la base de datos.
-
-  ```
-  phrase = {
-    "chats": "girls",
-    "character : "Rachel",
-    "phrase" : "Hello"
-  }
-  ``` 
-
-  - **/new/chat**
-  Con este endpoint insertaremos nuevos personajes a la base de datos.
-
-  ```
-  chat = {
-    "chats": "girls",
-    "participants :['Rachel', 'Monica', 'Phoebe']
-  }
-  ```
-
-
-  - **/chats**
-
-  Con este endpoint vemos los chats que hay en la base de datos.
-
-
-- **/phrases/<character>**
-
-  Con este endpoint vemos las frases del character elegido, por ejemplo character = Ros
-
-- **/participants**
-
-  Con este endpoint vemos los participantes de los chats
-
- - **/sentiment/character**
- Con este endpoint analizaremos las frases los sentimientos de las frases de un personaje
-
-
  
+ # **Descripción**
+
+ En este proyecto hemos usado FLASK para poder generar la API donde analizaremos si los mensajes entre los miembros de los grupos de chats son positivos o negativos.
+
+ # **Estructura del repo**
+
+ Hemos estructurado el proyecto en varios archivos y carpetas para que sea más fácil su entendimiento.
+  - Config, carpeta que  usamos para la configuración básica del proyecto.
+  - data carpeta donde va los archivos datos.
+  - src carpeta que guarda todos los archivos de funciones que usamos en este proyecto:
+
+    getdata.py :archivo que tiene las funciones de GET de la api.
+
+    postdata.py: archivo que tiene las funciones POST de la api.
+
+    sentiment.py: archivo que tiene las funciones que analiza los sentimientos de los mensajes.
+  - api.py:Este es el archivo principal de la API.
+
+# **Enlaces usados**
+
+- https://www.kaggle.com/blessondensil294/friends-tv-series-screenplay-script?select=S01E02+The+Sonogram+At+The+End.txt
+
+
+
+# **Libreías usadas**
+- sys
+
+- requests
+
+- json
+
+- load_dotenv
+
+ - os
+
+ - nltk
+
+- flask, Flask, request
+
+- markdown extensions fenced_code
+
