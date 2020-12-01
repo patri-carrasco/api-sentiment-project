@@ -23,7 +23,7 @@ def add_user(name):
   
 
 def add_chat(chat_name, participants):
-   """
+  """
       Esta función inserta un nuevo chat 
        arg:
           chat_name, participants     
